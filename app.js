@@ -1,11 +1,11 @@
 const express = require('express');
 const app = express();
 
-const topic = require('./routes/topic');
+const topicRoutes = require('./routes/topic');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use('/', topic);
+app.use('/', topicRoutes);
 
 const PORT = 8888;
 app.listen(PORT, () => {
