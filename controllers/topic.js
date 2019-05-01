@@ -54,15 +54,17 @@ exports.downVote = (req, res) => {
 }
 
 exports.showTopics = (req, res) => {
-	if (database.length == 0) {
+	const dataSort = database.sort((a, b) =>
+		b.upVote - a.upVote).slice(0, 20);
+	if (dataSort == 0) {
 		return res.json({
 			success: false,
-			message: 'Please Create Some Topic First'
-		})
+			message: 'Please Insert a Topic First'
+		});
 	}
 	return res.json({
 		success: true,
-		message: 'Showing Topic',
-		data: database
-	})
+		message: 'Show Database, Sort by Upvote Descending',
+		data: dataSort
+	});
 }
