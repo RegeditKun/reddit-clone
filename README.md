@@ -12,7 +12,7 @@ $ npm install
 $ npm start
 ```
 ## Built With
-* [Express]((https://www.express.com/)) - Framework
+* [Express](https://www.express.com/) - Framework
 * [Chai](https://www.chaijs.com/) & [Mocha](https://mochajs.org/) - Unit Testing Dependencies
 * [nyc](https://mochajs.org/) - Unit Testing Coverage
 * [ESLint](https://www.npmjs.com/package/eslint) - Eslinting using Airbnb standard
