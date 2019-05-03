@@ -1,0 +1,80 @@
+FORMAT: 1A
+HOST: https://reddit-up-down-vote.herokuapp.com
+
+# Reddit Clone
+
+This project was inspired by reddit which has upvote and downvote on every topic. this small project can only create a number of topics, give it upvote, give it downvote and return a list of top 20 topics (sorted by upvotes, descending). This project uses in-memory database storage.
+
+## Topic [/question]
+
+### Create Topic [POST /create]
+
++ Request (application/json)
+    
+    + Body
+
+            {
+                "title": "This topic is cool"
+            }
+
++ Response 201 (application/json)
+
+        {
+            "success": true,
+            "message": "New Topic Created",
+            "data": {
+                "id": "19cbfynjv6uhx39",
+                "title": "This topic is cool",
+                "upVote": 0,
+                "downVote": 0
+            }
+        }
+        
+### Up Vote Topic [PUT /upvote/{id}]
+
+
++ Parameters
+    + id (string) - ID Topic. example: 19cbfynjv6uhx39
+        
+
++ Response 200 (application/json)
+
+        {
+            "success": true,
+            "message": "Up Vote Success"
+        }
+
+### Down Vote Topic [PUT /downvote/{id}]
+
++ Parameters
+    + id (string) - ID Topic. example: 19cbfynjv6uhx39
+
++ Response 200 (application/json)
+
+        {
+            "success": true,
+            "message": "Down Vote Success"
+        }
+
+### Show Topics [GET /showtopics]
+
++ Response 200 (application/json)
+
+        {
+            "success": true,
+            "message": "Show Database, Sort by Upvote Descending",
+            "data": [
+                {
+                    "id": "xsff7njv7ah1bh",
+                    "title": "This topic is amazing",
+                    "upVote": 2,
+                    "downVote": 1
+                },
+                {
+                    "id": "xsff7njv7ajdrl",
+                    "title": "This topic is cool",
+                    "upVote": 1,
+                    "downVote": 1
+                }
+            ]
+        }
