@@ -26,6 +26,7 @@ mocha.describe('Testing Failed Routes', () => {
         downVote: 0,
       })
       .end((err, res) => {
+        expect(res).to.have.status(400);
         expect(res.body).to.have.property('success', false);
         expect(res.body).to.have.property('message', 'Max character is no more than 255');
         done();
@@ -35,6 +36,7 @@ mocha.describe('Testing Failed Routes', () => {
     chai.request(app)
       .put(`/upvote/${id}`)
       .end((err, res) => {
+        expect(res).to.have.status(404);
         expect(res.body).to.have.property('success', false);
         expect(res.body).to.have.property('message', 'Topic Id not found');
         done();
@@ -44,6 +46,7 @@ mocha.describe('Testing Failed Routes', () => {
     chai.request(app)
       .put(`/downvote/${id}`)
       .end((err, res) => {
+        expect(res).to.have.status(404);
         expect(res.body).to.have.property('success', false);
         expect(res.body).to.have.property('message', 'Topic Id not found');
         done();
@@ -53,6 +56,7 @@ mocha.describe('Testing Failed Routes', () => {
     chai.request(app)
       .get('/showtopics')
       .end((err, res) => {
+        expect(res).to.have.status(400);
         expect(res.body).to.have.property('success', false);
         expect(res.body).to.have.property('message', 'Please Insert a Topic First');
         done();
@@ -71,6 +75,7 @@ mocha.describe('Testing Success Routes', () => {
         downVote: 0,
       })
       .end((err, res) => {
+        expect(res).to.have.status(201);
         expect(res.body).to.have.property('success', true);
         expect(res.body).to.have.property('message', 'New Topic Created');
         expect(res.body).to.have.property('data').to.be.an('object');
@@ -82,6 +87,7 @@ mocha.describe('Testing Success Routes', () => {
     chai.request(app)
       .put(`/upvote/${ids}`)
       .end((err, res) => {
+        expect(res).to.have.status(200);
         expect(res.body).to.have.property('success', true);
         expect(res.body).to.have.property('message', 'Up Vote Success');
         done();
@@ -91,6 +97,7 @@ mocha.describe('Testing Success Routes', () => {
     chai.request(app)
       .put(`/downvote/${ids}`)
       .end((err, res) => {
+        expect(res).to.have.status(200);
         expect(res.body).to.have.property('success', true);
         expect(res.body).to.have.property('message', 'Down Vote Success');
         done();
@@ -100,6 +107,7 @@ mocha.describe('Testing Success Routes', () => {
     chai.request(app)
       .get('/showtopics')
       .end((err, res) => {
+        expect(res).to.have.status(200);
         expect(res.body).to.have.property('success', true);
         expect(res.body).to.have.property('message', 'Show Database, Sort by Upvote Descending');
         done();
