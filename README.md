@@ -24,7 +24,7 @@ $ npm start
 - [Heroku](https://reddit-up-down-vote.herokuapp.com)
 
 ## Documentation
-- [Reddit Documentation](https://documenter.getpostman.com/view/6658461/S1Lr5XDt#2b35ee8a-93ec-48cd-a8bd-f012aa714301)
+- [Reddit Documentation](https://github.com/RegeditKun/reddit-clone/blob/master/apiary.apib)
 
 ## License
 ```
