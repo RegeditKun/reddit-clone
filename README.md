@@ -18,15 +18,15 @@ $ npm start
 * [ESLint](https://www.npmjs.com/package/eslint) - Eslinting using Airbnb standard
 
 ## Unit Testing Coverage
-- [Coverage](https://reddit-in.herokuapp.com/coverage/)
+- [Coverage](https://reddit-up-down-vote.herokuapp.com/coverage/)
 
 ## Deployment
-- [Reddit Heroku](https://reddit-in.herokuapp.com/test)
+- [Heroku](https://reddit-up-down-vote.herokuapp.com)
 
 ## Documentation
 - [Reddit Documentation](https://documenter.getpostman.com/view/6658461/S1Lr5XDt#2b35ee8a-93ec-48cd-a8bd-f012aa714301)
 
-# License
+## License
 ```
 Copyright 2019 Indra Guritno
 
