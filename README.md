@@ -16,15 +16,16 @@ $ npm start
 * [Chai](https://www.chaijs.com/) & [Mocha](https://mochajs.org/) - Unit Testing Dependencies
 * [nyc](https://mochajs.org/) - Unit Testing Coverage
 * [ESLint](https://www.npmjs.com/package/eslint) - Eslinting using Airbnb standard
+* [apiary](https://apiary.io/) - Documentation
 
 ## Unit Testing Coverage
-- [Coverage](https://reddit-up-down-vote.herokuapp.com/coverage/)
+* [Coverage](https://reddit-up-down-vote.herokuapp.com/coverage/)
 
 ## Deployment
-- [Heroku](https://reddit-up-down-vote.herokuapp.com)
+* [Heroku](https://reddit-up-down-vote.herokuapp.com)
 
 ## Documentation
-- [Documentation](https://github.com/RegeditKun/reddit-clone/blob/master/apiary.apib)
+* [Documentation](https://github.com/RegeditKun/reddit-clone/blob/master/apiary.apib)
 
 ## License
 ```
